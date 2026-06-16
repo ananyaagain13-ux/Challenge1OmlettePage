@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Recipe page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playwrite+GB+S+Guides:ital@0;1&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playwrite+GB+S+Guides:ital@0;1&family=Young+Serif&display=swap');
+
+    .attribution {
+      font-size: 0.6875rem;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    body.main {
+      background-color: hsl(30, 54%, 90%);
+    }
+
+    div.container {
+      border-radius: 20px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 53%;
+      margin: auto;
+      margin-top: 20vh;
+      margin-bottom: 20vh;
+    }
+
+
+
+
+
+    span.mainheader {
+      color: hsl(24, 5%, 18%);
+      font-weight: 400;
+      font-family: "Young Serif", serif;
+      font-size: 40px;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      align-self: flex-start;
+      margin-left: 2rem;
+    }
+
+    .contenti {
+      justify-content: center;
+      font-family: "Outfit";
+      margin-left: 2rem;
+      margin-right: 2rem;
+      color: hsl(30, 10%, 34%);
+    }
+
+    .contentii {
+      font-family: 'Outfit';
+      align-self: flex-start;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      color: hsl(30, 10%, 34%)
+    }
+
+    .contentiii {
+      font-family: 'Outfit';
+      align-self: flex-start;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      color: hsl(30, 10%, 34%);
+    }
+
+    .contentiv {
+      font-family: 'Outfit';
+      align-self: flex-start;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      color: hsl(30, 10%, 34%);
+    }
+
+    .contentv {
+      font-family: 'Outfit';
+      align-self: flex-start;
+      margin-left: 2rem;
+      color: hsl(30, 10%, 34%);
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+
+    div.prep {
+      border-radius: 15px;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: hsl(330, 100%, 98%);
+      width: 90%;
+      margin: 2.5rem 0rem 2.5rem 0rem;
+    }
+
+    span.headeri {
+      align-self: flex-start;
+      font-size: 20px;
+      color: hsl(14, 45%, 36%);
+      font-family: 'Young Serif';
+      font-size: 25px;
+      font-weight: 400;
+      margin-left: 2rem;
+      padding: 0px;
+    }
+
+    span.headerii {
+      align-self: flex-start;
+      font-size: 20px;
+      color: hsl(14, 45%, 36%);
+      font-family: 'Young Serif';
+      font-size: 25px;
+      font-weight: 400;
+      margin-left: 2rem;
+      padding: 0px;
+    }
+
+    span.headeriii {
+      align-self: flex-start;
+      font-size: 20px;
+      color: hsl(14, 45%, 36%);
+      font-family: 'Young Serif';
+      font-size: 25px;
+      font-weight: 400;
+      margin-left: 2rem;
+      padding: 0px;
+    }
+
+    div.image {
+
+      width: auto;
+      height: auto;
+      padding: 2rem;
+    }
+
+    div.image img {
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+
+    }
+
+    li::marker {
+      color: hsl(14, 45%, 36%);
+      font-weight: bold;
+    }
+
+    ul.prep-list li::marker {
+      color: hsl(332, 51%, 32%);
+      font-weight: bold;
+    }
+
+    li {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      padding-left: 1rem;
+    }
+
+    tr td:nth-child(2) {
+      font-weight: bold;
+      color: hsl(14, 45%, 36%);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+      margin-bottom: 2rem
+    }
+
+    td :first-child {
+      width: 50%;
+      border-bottom: 1px solid hsla(30, 10%, 34%, 30%);
+      padding: 12px 0 12px 16px;
+    }
+
+    td:last-child {
+      width: 50%;
+      padding: 12px 16px 12px 0;
+      font-weight: 700;
+
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    td {
+      width:50%;
+      border-bottom: 1px solid hsla(30, 10%, 34%, 15%);
+    }
+
+    @media (max-width: 768px) {
+
+      body.main {
+        width: 100%;
+        background-color: white;
+        border: 0;
+        padding: 0;
+      }
+
+      div.container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+      }
+
+      div.image {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+      }
+
+      div.image img {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        display: block;
+        object-fit: cover;
+      }
+
+    }
+  </style>
+</head>
+
+<body class="main">
+  <div class="container">
+    <div class="image"><img src="assets/images/image-omelette.jpeg" alt="Omelette"></div>
+    <span class="mainheader">Simple Omelette Recipe</span>
+    <span class="contenti">An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs
+      cooked
+      to perfection, optionally filled with your choice of cheese, vegetables, or meats.</span>
+    <div class="prep">
+      <div class="miniheader"
+        style="font-size: 20px; color:hsl(332, 51%, 32%); font-family:'Outfit'; font-weight:600; align-self: flex-start; margin-top:1rem;margin-left: 1rem;">
+        Preparation time</div>
+      <span class="contentii">
+        <ul class="prep-list">
+          <li><strong>Total</strong>: Approximately 10 minutes</li>
+          <li><strong>Preparation</strong>: 5 minutes</li>
+          <li><strong>Cooking</strong>: 5 minutes</li>
+        </ul>
+      </span>
+    </div>
+    <span class="headeri"> Ingredients</span>
+    <span class="contentiii">
+      <ul style="color:hsl(30, 10%, 34%);">
+        <li>2-3 large eggs</li>
+        <li>Salt, to taste</li>
+        <li>Pepper, to taste</li>
+        <li>1 tablespoon of butter or oil</li>
+        <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+      </ul>
+    </span>
+    <span class="headerii">Instructions
+    </span>
+    <span class="contentiv">
+      <ol>
+        <li><strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and pepper until they are
+          well mixed.
+          You can add a tablespoon of water or milk for a fluffier texture.</li>
+
+        <li><strong>Heat the pan:</strong> Place a non-stick frying pan over medium heat and add butter or oil.</li>
+
+        <li><strong> Cook the omelette:</strong> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan
+          to ensure
+          the eggs evenly coat the surface.</li>
+
+        <li> <strong>Add fillings (optional):</strong> When the eggs begin to set at the edges but are still slightly
+          runny in the
+          middle, sprinkle your chosen fillings over one half of the omelette.</li>
+
+        <li><strong> Fold and serve:</strong> As the omelette continues to cook, carefully lift one edge and fold it
+          over the
+          fillings. Let it cook for another minute, then slide it onto a plate.</li>
+
+        </li><strong></strong> Enjoy: Serve hot, with additional salt and pepper if needed.</li>
+      </ol>
+    </span>
+    <span class="headeriii">Nutrition</span>
+    <span class="contentv">
+      The table below shows nutritional values per serving without the additional fillings.
+      <table>
+        <tr>
+          <td>Calories</td>
+          <td>277kcal</td>
+        </tr>
+        <tr>
+          <td>Carbs</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Protein</td>
+          <td>20g</td>
+        </tr>
+        <tr>
+          <td>Fat</td>
+          <td>22g</td>
+        </tr>
+      </table>
+    </span>
+  </div>
+
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Ananya</a>.
+  </footer>
+</body>
+
+</html>
